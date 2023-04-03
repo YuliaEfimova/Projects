@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" lang="ru">
+<head>
+    <title>Registration </title>
+    <style>
+        input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            background-color: #ccccff;
+        }
+        input[type=submit] {
+            background-color: #9966ff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Регистрация</h1>
+<p>Заполните форму ниже:</p>
+<form th:action="@{/registration}" method="post">
+    <div><label> Фамилия: <input type="text" name="second_Name" required/> </label></div>
+    <div><label> Имя : <input type="text" name="first_Name" required/> </label></div>
+    <div><label> Отчество: <input type="text" name="middle_Name" required/> </label></div>
+    <div><label> Дата рождения: <input type="date" name="date_Of_Birth" required/> </label></div>
+    <div><label> Номер СНИЛС: <input type="text" name="username" required/> </label></div>
+    <div><label> Пароль: <input type="password" name="password" required/> </label></div>
+    <div><input type="submit" value="Зарегистрироваться"/></div>
+</form>
+</body>
+</html>
