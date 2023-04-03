@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+User editor
+<form action="/user" method="post">
+    {{#roles}}
+        <div>
+            <label><input type="checkbox" name="{{roles}}">{{roles}}</label>>
+        </div>
+    {{/roles}}
+    {{#username}}
+        <input type="hidden" name="username" value="{{username}}">
+        <input type="hidden" value="{{id}}" name="userId">
+    {{/username}}
+    <input type="hidden" value="{{_csrf.token}}" name="_csrf">
+    <button type="submit">Save</button>
+</form>
+</body>
+</html>

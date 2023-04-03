@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Spring Security Example</title>
+</head>
+<body>
+List of users
+<table>
+    <head>
+    <tr>Name</tr>
+    <th>Role</th>
+    <th></th>
+    </head>
+    <tbody>
+    {{#users}}
+        <tr>
+            <td>{{username}}</td>
+        <td>
+            {{#roles}}
+                {{roles}}
+                <td><a href="/user/{{id}}">edit</a></td>
+            {{/roles}}
+            </td>
+        </tr>
+    {{/users}}
+    </tbody>
+</table>
+</body>
+</html>
